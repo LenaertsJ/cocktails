@@ -3,8 +3,124 @@
 @use "./base/fonts";
 @use "./base/mixins" as *;
 
-@import "../../icons/style";
-
 body {
-  background-color: $pink;
+  background: radial-gradient(
+    circle,
+    rgba(255, 155, 91, 1) 0%,
+    rgba(254, 111, 107, 1) 100%
+  );
+}
+
+.title {
+  font-size: 200px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Libre Barcode 39 Text", cursive;
+  color: #ab3b8e;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container {
+  margin: 100px;
+  display: flex;
+
+  .shop {
+    // border: 1px solid #ab3b8e;
+    // border-radius: 5px;
+    width: 70%;
+    .search-section {
+      border: 1px solid #ffc959;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .shop-subtitle {
+      text-align: center;
+      font-size: 30px;
+      font-family: "Codystar", cursive;
+      // margin-top: 30px;
+      margin-bottom: 30px;
+      color: #0089c4;
+    }
+    .search {
+      text-align: center;
+
+      input {
+        width: 300px;
+        border: none;
+        border-radius: 10px;
+        line-height: 30px;
+        padding-left: 8px;
+        font-family: "barlow condensed", sans-serif;
+        font-size: 15px;
+        margin-right: 20px;
+        background-color: #ffc959;
+      }
+      button {
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        line-height: 30px;
+        font-family: "barlow condensed", sans-serif;
+        font-size: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: #dd4c7e;
+        text-transform: uppercase;
+      }
+    }
+    .menu {
+      text-align: center;
+      .item {
+        display: flex;
+        margin-bottom: 10px;
+        font-family: "barlow condensed", sans-serif;
+        h3 {
+          margin-right: 5px;
+        }
+        .btns {
+          margin-left: auto;
+          display: flex;
+          .btn {
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+          .btnAdd {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .cart {
+    width: 30%;
+    margin-left: 30px;
+    border: solid 1px #f9f871;
+    border-radius: 5px;
+    h2 {
+      font-family: "Libre Barcode 39 Text", cursive;
+      font-size: 30px;
+      margin-left: 90px;
+      margin-right: 90px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .cart-list {
+      text-align: center;
+      margin-top: 30px;
+      .cart-item {
+        font-family: "barlow condensed", sans-serif;
+        color: black;
+        display: flex;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        .details {
+          margin-left: auto;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
 }

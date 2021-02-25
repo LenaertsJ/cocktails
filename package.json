@@ -13,7 +13,7 @@
     "clean": "rm -rf ./build/ ./.cache",
     "sass-prod": "sass ./src/css/style.scss build/css/style.css --no-source-map --style=compressed",
     "js-prod": "parcel build ./src/js/index.js --out-dir ./build/js --out-file bundle.js  --no-source-maps",
-    "deploy": "surge . --domain https://david-nieuwjaar.surge.sh"
+    "deploy": "surge . --domain https://tequila-sunrise.surge.sh"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +22,16 @@
     "babel-core": "^6.26.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0"
-  }
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "uuid": "^8.3.2"
+  },
+  
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
